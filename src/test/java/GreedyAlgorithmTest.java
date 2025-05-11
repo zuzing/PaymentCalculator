@@ -32,7 +32,6 @@ public class GreedyAlgorithmTest {
         algorithm.run();
 
         TransactionHistory history = algorithm.history;
-        Map<String, Double> results = history.aggregateByMethod();
         double totalAmount = history.getTotalAmount();
 
         assertTrue(round(totalAmount) <= 480.00, "Total amount should be less than or equal to 480.00");

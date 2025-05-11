@@ -36,7 +36,7 @@ public class PaymentMethodLoaderTest {
 
         PaymentMethod first = methods.get(0);
         assertEquals("PUNKTY", first.getId());
-        assertEquals(15, first.getDiscount());
+        assertEquals(0.15, first.getDiscount());
         assertEquals(100.0, first.getLimit());
     }
 }

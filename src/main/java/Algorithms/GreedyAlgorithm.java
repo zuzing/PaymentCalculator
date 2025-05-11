@@ -79,8 +79,8 @@ public class GreedyAlgorithm {
                     .sorted(Comparator.comparingDouble(PaymentMethod::getLeft))
                     .toList()){
                 if(canPay(method, order, points)){
-                    pay(method, order, method.getLeft());
-                    pay(points, order, order.getLeftToPay());
+                    pay(points, order, points.getLeft());
+                    pay(method, order, order.getLeftToPay());
                 }
             }
             if(!order.isPaid()){
@@ -99,7 +99,7 @@ public class GreedyAlgorithm {
     }
 
     private void pay(PaymentMethod method,Order order, double amount) {
-        if (method.getLeft() > amount && method instanceof Points) {
+        if (method.getLeft() > amount) {
             order.applyDiscount(Points.PARTIAL_DISCOUNT_PERCENTAGE);
         } else {
             order.applyDiscount(method.getDiscount());
