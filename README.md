@@ -73,8 +73,8 @@ java -jar app.jar orders.json paymentmethods.json
 Clone the repository:
 
 ```bash
-git clone <repo_url>
-cd <project_directory>
+git clone zuzing/PaymentCalculator
+cd PaymentCalculator
 ```
 
 Build the JAR file using Gradle:
